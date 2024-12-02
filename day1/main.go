@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"log"
 	"math"
 	"os"
 	"sort"
@@ -15,10 +14,8 @@ import (
 func main() {
 	start := time.Now()
 
-	file, err := os.Open("input.txt")
-	if err != nil {
-		log.Fatalf("Unable to open file")
-	}
+	file, _ := os.Open("input.txt")
+
 	defer file.Close()
 	scanner := bufio.NewScanner(file)
 
